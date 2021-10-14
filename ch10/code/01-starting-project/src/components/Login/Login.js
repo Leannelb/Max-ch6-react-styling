@@ -82,6 +82,7 @@ const Login = (props) => {
 	};
 
 	const submitHandler = (event) => {
+		console.log('event ', event);
 		event.preventDefault();
 		props.onLogin(emailReduceState.value, passReduceState.value);
 	};
