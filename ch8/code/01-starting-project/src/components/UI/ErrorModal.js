@@ -5,7 +5,7 @@ import styles from './ErrorModal.module.css';
 import Card from './Card';
 import Button from './Button';
 
-const Backdrop = (props) => {
+const Backdrop = (props)g => {
     return <div className={styles.backdrop} onClick={props.onConfirm} />;
 }
 
