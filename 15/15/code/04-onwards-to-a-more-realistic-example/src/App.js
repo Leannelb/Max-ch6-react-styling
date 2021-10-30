@@ -13,14 +13,14 @@ function App() {
     for (const taskKey in tasksObj) {
       loadedTasks.push({ id: taskKey, text: tasksObj[taskKey].text })
     }
-  })
 
-  const httpData = useHttp(transformTasks);
+    //setTasks(loadedTasks);
+  }, []);
 
-  const { isLoading, error, sendRequest: fetchTasks } = httpData;
+  const { isLoading, error, sendRequest: fetchTasks } = useHttp(transformTasks);
 
   useEffect(() => {
-    fetchTasks({ url: 'https://max-complete-react-default-rtdb.europe-west1.firebasedatabase.app/tasks.json'});
+    fetchTasks({ url: 'https://max-complete-react-default-rtdb.europe-west1.firebasedatabase.app/tasks.json' });
   }, [fetchTasks]);
 
   const taskAddHandler = (task) => {
