@@ -47,7 +47,6 @@ const Cart = (props) => {
           Close
         </button>
         {hasItems && <button disabled={!hasItems} className={classes.button}>Order</button>}
-        {/* <button disabled={!hasItems} className={classes.button}>Order</button> */}
       </div>
     </Modal>
   );
